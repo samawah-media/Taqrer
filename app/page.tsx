@@ -28,13 +28,15 @@ function LandingContent() {
       });
 
       if (response.ok) {
-        // Direct Download Action
-        const link = document.createElement('a');
-        link.href = '/samawah-report-2025.pdf'; // Make sure this file exists in public/
-        link.download = 'تقرير-سماوة-للأصول-الإعلامية.pdf';
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
+        // TODO: The samawah-report-2025.pdf file is missing from the public/ directory.
+        // The download functionality is temporarily disabled until the file is available.
+        //
+        // const link = document.createElement('a');
+        // link.href = '/samawah-report-2025.pdf'; // Make sure this file exists in public/
+        // link.download = 'تقرير-سماوة-للأصول-الإعلامية.pdf';
+        // document.body.appendChild(link);
+        // link.click();
+        // document.body.removeChild(link);
 
         setIsSuccess(true);
       }
@@ -382,9 +384,9 @@ function LandingContent() {
               <div className="bg-green-500 w-20 h-20 rounded-full flex items-center justify-center text-white mx-auto mb-6 shadow-xl shadow-green-200">
                 <CheckCircle2 size={40} />
               </div>
-              <h3 className="text-3xl font-black text-green-900 mb-4">تم الإرسال بنجاح!</h3>
-              <p className="text-green-800 mb-8">رابط التقرير في طريقه لإيميلك الآن. استمتع برحلة التحول.</p>
-              <button onClick={() => setIsSuccess(false)} className="text-green-700 font-bold hover:underline">تحميل نسخة ثانية؟</button>
+              <h3 className="text-3xl font-black text-green-900 mb-4">تم تسجيل طلبك بنجاح!</h3>
+              <p className="text-green-800 mb-8">سيتم إرسال التقرير إلى بريدك الإلكتروني قريباً. شكراً لك.</p>
+              <button onClick={() => setIsSuccess(false)} className="text-green-700 font-bold hover:underline">العودة إلى النموذج</button>
             </motion.div>
           )}
 
